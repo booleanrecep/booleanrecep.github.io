@@ -1,5 +1,5 @@
 import React from 'react';
-import {MemoryRouter as Router,Route, Redirect} from "react-router-dom";
+import {BrowserRouter as Router,Route, Redirect} from "react-router-dom";
 
 import {myData as data} from "./data";
 import MiniDrawer  from "./MiniDrawer";
@@ -40,7 +40,6 @@ export default class App extends React.Component{
         return (
           <div>
             <Router>
-                {/* <Redirect to="/about" /> */}
                 <Route path="/" render={()=>
                     <MiniDrawer header={this.state.selectedSection.header}
                                 lightStyle={this.state.lightStyle}
@@ -49,6 +48,7 @@ export default class App extends React.Component{
                                 projects={this.state.data.projects}
                                 imgAbout={this.state.data.avatar}
                                 skills={this.state.data.skills}
+                                
                     />
                 }/>
             </Router>

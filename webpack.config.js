@@ -15,7 +15,7 @@ module.exports={
         rules:[
             {
                 test:/\.png$/,
-                loader:"file-loader?name=[path][name].[ext]",
+                loader:"file-loader?name=[path][name][hash].[ext]",
             },
             {
                 test:/\.js$/,
@@ -27,7 +27,7 @@ module.exports={
     plugins:[
         new HTMLWebpackPlugin({
           template:path.join(__dirname,"public","index.html"),
-          filename:"index_bundle.html"  
+          filename:"index.html"  
         })
     ]
 }
