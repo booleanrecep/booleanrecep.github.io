@@ -47,7 +47,7 @@ export default function About(props) {
                   <Paper  className={classes.paper}>
                       <Card  >
                           <CardMedia 
-                                image={props.imgAbout}
+                                image={require(`${props.imgAbout}`)}
                                 title="Avatar of Me"
                                 className={classes.img}
                                 />

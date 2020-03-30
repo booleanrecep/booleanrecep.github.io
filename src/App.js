@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router,Route, Redirect} from "react-router-dom";
+import {MemoryRouter as Router,Route, Redirect,BrowserRouter} from "react-router-dom";
 
 import {myData as data} from "./data";
 import MiniDrawer  from "./MiniDrawer";
@@ -40,6 +40,8 @@ export default class App extends React.Component{
         return (
           <div>
             <Router>
+             <Redirect to="/" />
+
                 <Route path="/" render={()=>
                     <MiniDrawer header={this.state.selectedSection.header}
                                 lightStyle={this.state.lightStyle}

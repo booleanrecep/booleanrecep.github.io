@@ -15,14 +15,14 @@
     "react-router-dom": "^5.1.2"
   },
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "webpack-cli --mode production",
     "start:dev": "webpack-dev-server --color --mode development --open --hot",
     "start": "react-scripts start",
     "build:sc": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -b master -d dist"
 
   },
   "eslintConfig": {

@@ -24,9 +24,10 @@ import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import Grid from "@material-ui/core/Grid";
 import {
-  BrowserRouter as Router,
+  MemoryRouter as Router,
     Route,
     Link,
+    Redirect
 } from "react-router-dom";
 
 import Projects from "./Projects";
@@ -225,7 +226,7 @@ export default function MiniDrawer(props) {
         </Route>
         <Route path="/cv" render={()=>
             <Grid >
-                <img alt="ııı" className={classes.img} src={require(`${props.image}`)}/>
+                <img alt="ııı" className={classes.img} src={props.image}/>
             </Grid>}/>
 
         <Route path="/projects" render={()=>
